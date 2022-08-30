@@ -201,6 +201,16 @@ class MenuLateral extends StatelessWidget {
           Ink(
             color: Colors.green[300],
             child: new ListTile(
+              leading: const Icon(Icons.signal_wifi_connected_no_internet_4),
+              title: Text(
+                "Calendario",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+           Ink(
+            color: Colors.green[300],
+            child: new ListTile(
               leading: const Icon(Icons.local_cafe),
               title: Text(
                 "Desayuno",

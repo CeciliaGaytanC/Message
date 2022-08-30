@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Calendar.dart';
 import 'Principal.dart';
 import 'Registro.dart';
 import 'galery.dart';
@@ -132,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     print(passwordController.text);
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Principal()));
+                          MaterialPageRoute(builder: (context) => Calendar(title: '',)));
                       // Si el formulario es válido, queremos mostrar un Snackbar
                     } else {
                       Scaffold.of(context).showSnackBar(SnackBar(
