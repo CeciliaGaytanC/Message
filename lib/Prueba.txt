@@ -29,3 +29,14 @@ bottomNavigationBar: BottomNavyBar(
      ),
    ],
 )
+
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  //final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}

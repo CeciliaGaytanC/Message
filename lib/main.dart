@@ -1,3 +1,4 @@
+import 'package:cook/BottomBar.dart';
 import 'package:flutter/material.dart';
 
 import 'Calendar.dart';
@@ -133,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     print(passwordController.text);
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Calendar(title: '',)));
+                          MaterialPageRoute(builder: (context) => BotonB(title: '',)));
                       // Si el formulario es válido, queremos mostrar un Snackbar
                     } else {
                       Scaffold.of(context).showSnackBar(SnackBar(
