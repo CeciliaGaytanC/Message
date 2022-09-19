@@ -1,7 +1,8 @@
-import 'package:cook/BotBar.dart';
-import 'package:cook/BottomBar.dart';
+//import 'package:cook/BotBar';
+//import 'package:cook/BottomBar.%C3%A7';
 import 'package:flutter/material.dart';
 
+import 'BotonB.dart';
 import 'Calendar.dart';
 import 'Principal.dart';
 import 'Registro.dart';
@@ -135,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     print(passwordController.text);
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => BotonBot(title: '',)));
+                          MaterialPageRoute(builder: (context) => Botonazo()));
                       // Si el formulario es válido, queremos mostrar un Snackbar
                     } else {
                       Scaffold.of(context).showSnackBar(SnackBar(
