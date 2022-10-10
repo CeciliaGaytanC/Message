@@ -1,0 +1,63 @@
+0
+
+
+
+Si se usa  un TextField  sugiero usar un TextEditingController que esto se  declara al principio de  clase:
+
+final controllerNombre = TextEditingController();
+  //en el ejemplo solo nos importa el cargo
+  final controllerCargo = TextEditingController();
+  final controllerContrasena = TextEditingController();
+Supongamos que se tiene  el formulario de inicio de sesión, usuario, cargo y contraseña(a cada textfield se asigna su controlador):
+
+Column(
+  children: [
+    TextField(
+      controller: controllerNombre,
+      decoration: InputDecoration(
+          hintText: "Ingrese el cargo", label: Text("cargo")),
+    ),
+    TextField(
+      controller: controllerCargo,
+      decoration: InputDecoration(
+          hintText: "Ingrese su nombre", label: Text("nombre")),
+    ),
+    TextField(
+      controller: controllerContrasena,
+      decoration: InputDecoration(
+          hintText: "Ingrese la contraseña", label: Text("contraseña")),
+    )
+  ],
+);
+Ahora para poder hacer la valicación supongamos que tenemos un botón debajo del formulario, este botón se encargara de hacer la validación que necesitas para dirigir a la pantalla que desees:
+
+    TextButton(
+          onPressed: () {
+            //tienes la opcion de usar Switch case o if else, me gusta mas el switch pero ya es decisión tuya
+            switch (controllerCargo.text) {
+              // Si lo que ingresaste en el campo "cargo" es igual a una de las opciones a continuación, irá a la pagina ya establecida
+              case "asesor":
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => PaginaAsesor()));
+                break;
+              case "admin":
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => PaginaAdmin()));
+                break;
+              case "usuario":
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => PaginaUsuario()));
+                break;
+              default:
+            }
+          },
+          child: Text("Continuar"),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.black),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+          ),
+        ),
