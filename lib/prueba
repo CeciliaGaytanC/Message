@@ -58,7 +58,8 @@ Ahora para poder hacer la valicación supongamos que tenemos un botón debajo de
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
 
-                //comm
+                //comentario
+                
               ),
             ),
           ),
